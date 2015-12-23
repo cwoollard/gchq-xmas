@@ -144,9 +144,9 @@ class ShadedVar(Var):
 def pretty_print_solution(sol):
     positive_indices = {t for t in sol if t > 0}
     for row in range(HEIGHT):
-        print "".join(".#"[shaded_vars[row, col].idx in positive_indices]
-                                                       for col in range(WIDTH))
-    print
+        print ("".join(".#"[shaded_vars[row, col].idx in positive_indices]
+                                                       for col in range(WIDTH)))
+    print()
 
 
 # Variable definitions.
